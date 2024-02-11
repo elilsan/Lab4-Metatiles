@@ -111,7 +111,7 @@
                 'attribution': 'Map tiles designed by Elizabeth Luna'
 
             });
-            map.addSource('Mexican-flag-colors', {
+            map.addSource('Mexican-flag-colors-tiles', {
                 'type': 'raster',
                 'tiles': [
                     'Assets/Mexican-flag-colors/{z}/{x}/{y}.png'
@@ -148,12 +148,12 @@
             });
 
             map.addLayer({
-                'id': 'Mexican flag colors',
+                'id': 'Mexican Flag Colors',
                 'type': 'raster',
                 'layout': {
                     'visibility': 'none'
                 },
-                'source': 'Mexican-flag-colors'
+                'source': 'Mexican-flag-colors-tiles'
             });
 
         });
@@ -162,12 +162,12 @@
         // After the last frame rendered before the map enters an "idle" state.
         map.on('idle', () => {
             // If these two layers were not added to the map, abort
-            if (!map.getLayer('Base') || !map.getLayer('Transit+Base') || !map.getLayer('Transit Stops') || !map.getLayer('Mexican flag colors')) {
+            if (!map.getLayer('Base') || !map.getLayer('Transit+Base') || !map.getLayer('Transit Stops') || !map.getLayer('Mexican Flag Colors')) {
                 return;
             }
 
             // Enumerate ids of the layers.
-            const toggleableLayerIds = ['Base', 'Transit+Base', 'Transit Stops', 'Mexican flag colors'];
+            const toggleableLayerIds = ['Base', 'Transit+Base', 'Transit Stops', 'Mexican Flag Colors'];
 
             // Set up the corresponding toggle button for each layer.
             for (const id of toggleableLayerIds) {
