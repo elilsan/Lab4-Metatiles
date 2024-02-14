@@ -6,7 +6,7 @@ From the following generated map layers, the first one was intended to be the mo
 
 ![](Assets/Base/Base.jpg)
 
-In the second layer, it is demonstrating the available transit stops throughout the city of San Diego. The dots each represent a transit stop, which gives the viewer an idea of where the most of the transit stops are located.
+In the second layer, it is demonstrating the available transit stops throughout the city of San Diego. The dots each represent a transit stop, which gives the viewer an idea of where the most of the transit stops are located. This data was sourced from the [city of San Diego website](https://data.sandiego.gov/datasets/transit-stops/), which provided various datasets available to the general public.
 
 ![](Assets/transit2/data.jpg)
 
