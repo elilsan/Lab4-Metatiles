@@ -102,10 +102,10 @@
                 'attribution': 'Map tiles designed by Elizabeth Luna</a>'
             });
 
-            map.addSource('Transit-stops-tiles', {
+            map.addSource('transit2-tiles', {
                 'type': 'raster',
                 'tiles': [
-                    'Assets/Transit-stops/{z}/{x}/{y}.png'
+                    'Assets/transit2/{z}/{x}/{y}.png'
                 ],
                 'tileSize': 256,
                 'attribution': 'Map tiles designed by Elizabeth Luna</a>'
@@ -122,7 +122,7 @@
             });
 
             map.addLayer({
-                'id': 'Base',
+                'id': 'Modified base',
                 'type': 'raster',
                 'layout': {
                     'visibility': 'none'
@@ -131,7 +131,7 @@
             });
 
             map.addLayer({
-                'id': 'Mexican-flag-colors',
+                'id': 'Mexican flag colors',
                 'type': 'raster',
                 'layout': {
                     'visibility': 'none'
@@ -140,16 +140,16 @@
             });
 
             map.addLayer({
-                'id': 'Transit-stops',
+                'id': 'Transit stops',
                 'type': 'raster',
                 'layout': {
                     'visibility': 'none'
                 },
-                'source': 'Transit-stops-tiles'
+                'source': 'transit2-tiles'
             });
 
             map.addLayer({
-                'id': 'Transit+base',
+                'id': 'Transit stops and base',
                 'type': 'raster',
                 'layout': {
                     'visibility': 'none'
@@ -163,12 +163,12 @@
         // After the last frame rendered before the map enters an "idle" state.
         map.on('idle', () => {
             // If these two layers were not added to the map, abort
-            if (!map.getLayer('Base') || !map.getLayer('Mexican-flag-colors') || !map.getLayer('Transit-stops') || !map.getLayer('Transit+base')) {
+            if (!map.getLayer('Modified base') || !map.getLayer('Mexican flag colors') || !map.getLayer('Transit stops') || !map.getLayer('Transit stops and base')) {
                 return;
             }
 
             // Enumerate ids of the layers.
-            const toggleableLayerIds = ['Base', 'Transit-stops', 'Transit+base', 'Mexican-flag-colors'];
+            const toggleableLayerIds = ['Modified base', 'Transit stops', 'Transit stops and base', 'Mexican flag colors'];
 
             // Set up the corresponding toggle button for each layer.
             for (const id of toggleableLayerIds) {
