@@ -2,7 +2,7 @@
 
 This map is intended to show different views of the geographical area of San Diego with map layers demonstrating their selected attribute. The map can be viewed at [this](https://elilsan.github.io/Lab4-Metatiles/) site. All layers are able to be zoomed in quite closely, even up to individual streets. The zoom level of the following screenshots are to demonstrate the vast area of San Diego and neighboring cities, and to give more space on how the layers are visualized.
 
-From the following generated map layers, the first one was intended to be the modified version of the basemap "monochrome," provided by mapbox. This layer provides the viwer with an clear view of the geographical area without the added details.
+From the following generated map layers, the first one was intended to be the modified version of the basemap "monochrome," provided by mapbox. This layer provides the viewer with an clear view of the geographical area without the added details.
 
 ![](Assets/Base/Base.jpg)
 
