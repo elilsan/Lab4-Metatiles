@@ -5,7 +5,7 @@
     <title>Exploring San Diego</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css" rel="stylesheet">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.css" rel="stylesheet">
 
     <style>
         body {
@@ -66,7 +66,7 @@
             background: #3074a4;
         }
     </style>
-    <script src="https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.js"></script>
 </head>
 
 <body>
@@ -78,8 +78,8 @@
         let map = new mapboxgl.Map({
             container: 'map', // container ID
             style: 'mapbox://styles/mapbox/light-v11',
-            zoom: 10.58, // starting zoom
-            center: [-117.134927, 32.813358] // starting center
+            zoom: 10.85, // starting zoom
+            center: [-117.111521, 32.789909] // starting center
         });
 
         map.on('load', () => { //simplifying the function statement: arrow with brackets to define a function
@@ -99,7 +99,7 @@
                     'Assets/Mexican-flag-colors/{z}/{x}/{y}.png'
                 ],
                 'tileSize': 256,
-                'attribution': 'Map tiles designed by Elizabeth Luna'
+                'attribution': 'Map tiles designed by Elizabeth Luna</a>'
             });
 
             map.addSource('Transit-stops-tiles', {
@@ -108,7 +108,7 @@
                     'Assets/Transit-stops/{z}/{x}/{y}.png'
                 ],
                 'tileSize': 256,
-                'attribution': 'Map tiles designed by Elizabeth Luna'
+                'attribution': 'Map tiles designed by Elizabeth Luna</a>'
 
             });
 
@@ -118,7 +118,7 @@
                     'Assets/Transit+base/{z}/{x}/{y}.png'
                 ],
                 'tileSize': 256,
-                'attribution': 'Map tiles designed by Elizabeth Luna'
+                'attribution': 'Map tiles designed by Elizabeth Luna</a>'
             });
 
             map.addLayer({
@@ -168,7 +168,7 @@
             }
 
             // Enumerate ids of the layers.
-            const toggleableLayerIds = ['Base', 'Transit+base', 'Transit-stops', 'Mexican-flag-colors'];
+            const toggleableLayerIds = ['Base', 'Transit-stops', 'Transit+base', 'Mexican-flag-colors'];
 
             // Set up the corresponding toggle button for each layer.
             for (const id of toggleableLayerIds) {
